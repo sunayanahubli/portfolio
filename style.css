@@ -1,58 +1,119 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 12px;
+    font-size: 16px;
     max-width: 960px;
     margin: auto;
+    background-color: #f5f5f5;
 }
+
 h1 {
     font-size: 3em;
-    letter-spacing: .6em;
-    padding-top: 1em;
-    padding-bottom: 1em;
+    letter-spacing: .1em;
+    padding: 1em 0;
+    color: #333;
 }
 
 h2 {
-    font-size: 1.5em;
-    padding-bottom: 1em;
+    font-size: 1.8em;
+    padding: 1em 0;
+    color: #333;
 }
 
 h3 {
-    font-size: 1em;
-    padding-bottom: 1em;
+    font-size: 1.5em;
+    padding: 1em 0;
+    color: #555;
 }
 
-main { 
+main {
     display: grid;
     grid-template-columns: 40% 60%;
-    margin-top: 3em;
+    margin-top: 2em;
 }
+
 header {
     text-align: center;
-    margin: auto 2em;
+    margin: auto 1em;
 }
 
 section {
-    margin: auto 1em 4em 2em;
+    margin: auto 1em 3em 2em;
 }
 
 i {
     margin-right: .5em;
+    color: #007BFF;
 }
 
 p {
-    margin: .2em auto
+    margin: .2em auto;
+    color: #666;
 }
 
 hr {
     border: none;
-    background-color: lightgray;
+    background-color: #dcdcdc;
     height: 1px;
 }
 
 h1, h2, h3 {
-    font-weight: 100;
+    font-weight: 300;
     margin-bottom: 0;
 }
+
 #mainLeft {
-    border-right: 1px solid lightgray;
+    border-right: 1px solid #dcdcdc;
 }
+
+.project-link {
+    color: #007BFF;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.project-link:hover {
+    color: #0056b3;
+}
+/* Dark Mode Toggle Styles */
+.dark-mode-toggle {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dark-mode-toggle input[type="checkbox"] {
+    display: none;
+  }
+  
+  .dark-mode-toggle label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50px; /* Adjust width as needed */
+    height: 25px; /* Adjust height as needed */
+    background-color: #ccc;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .dark-mode-toggle label::before {
+    content: "";
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    left: 0;
+    top: 0;
+    background-color: #fff; /* Default color for the button */
+    transition: transform 0.3s;
+  }
+  
+  /* Dark Mode Styling */
+  .dark-mode-toggle input[type="checkbox"]:checked + label {
+    background-color: #333; /* Dark mode background color */
+  }
+  
+  .dark-mode-toggle input[type="checkbox"]:checked + label::before {
+    transform: translateX(25px); /* Move the button to the right for dark mode */
+  }
+  
