@@ -17,7 +17,7 @@ h1 {
     color: #333;
 }
 
-h1.dark-mode {
+body.dark-mode h1 {
     font-size: 3em;
     letter-spacing: .1em;
     padding: 1em 0;
@@ -29,7 +29,7 @@ h2 {
     padding: 1em 0;
     color: #333;
 }
-h2.dark-mode {
+body.dark-mode h2 {
     font-size: 1.8em;
     padding: 1em 0;
     color: white;
@@ -39,7 +39,7 @@ h3 {
     padding: 1em 0;
     color: #555;
 }
-h3.dark-mode {
+body.dark-mode h3 {
     font-size: 1.5em;
     padding: 1em 0;
     color: white;
@@ -55,6 +55,13 @@ header {
     margin: auto 1em;
 }
 
+i {
+    margin-right: .5em;
+    color: #007BFF;
+}
+
+body.dark-mode li{color: white;}
+
 section {
     margin: auto 1em 3em 2em;
 }
@@ -68,7 +75,7 @@ p {
     margin: .2em auto;
     color: #666;
 }
-p.dark-mode {
+body.dark-mode p {
     margin: .2em auto;
     color: white;
 }
@@ -95,6 +102,15 @@ h1, h2, h3 {
 
 .project-link:hover {
     color: #0056b3;
+}
+body.dark-mode .project-link {
+    color: #12b300;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+body.dark-mode .project-link:hover {
+    color: #12b300;
 }
 /* Dark Mode Toggle Styles */
 .dark-mode-toggle {
@@ -139,3 +155,4 @@ h1, h2, h3 {
     transform: translateX(25px); /* Move the button to the right for dark mode */
   }
   
+body.dark-mode a{color: #12b300;;}
